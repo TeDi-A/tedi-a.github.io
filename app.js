@@ -63,7 +63,6 @@ app.post("/compose", function (req, res) {
 
 app.get("/posts/:postName", function (req, res) {
   const requestedPostTitle = req.params.postName;
-  // const requestedPostId = req.params.postId;
   
     Post.findOne({ title : requestedPostTitle })
       .then((post) => {
